@@ -24,9 +24,10 @@ If you want to work on Pluto's internals, **this is were the fun is**! As you'll
 
 It is easy to get started with JavaScript for Pluto!
 
--   There are no build tools! Just change the JS code and refresh the browser. (Use the browser dev tools and a good IDE.)
+-   There are no build tools! Just change the JS code and refresh the browser. (Use the browser dev tools and VS Code.)
 -   You only need to test on the latest Firefox and Chrome browsers.
 -   The front-end is written in React (actually, Preact with `htm` instead of `JSX`). If you know React, you can jump straight in, if not, you can read up on the basics of React, but many TODO items are doable _without an understanding of the overall structure_.
+-   The Pluto.jl has a `.vscode` folder that will automatically set up your development environment with the right extensions and debugging tools. If you are working on a large feature, we also recommend setting up [editing CSS source files directly from the Chrome inspector](https://developer.chrome.com/docs/devtools/workspaces/).
 
 **We are always happy to do a video/audio call to talk about the project, about _your project_, and to help you get started! Get in touch over email/slack/zulip/Pluto feedback!**
 
