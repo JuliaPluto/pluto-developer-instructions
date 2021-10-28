@@ -15,7 +15,8 @@ Here is how you release a new Pluto.jl version:
 11. If you know how, trigger binder builds for all mybinder.org providers.
 
 If this is a **RECOMMENDED** release (i.e. we want all users to get a pop-up to update Pluto):
-1. Open the release and edit the description to contain `Recommended update` ([example](https://github.com/fonsp/Pluto.jl/releases/tag/v0.14.7))
+1. Wait at least 4 hours before marking a release as recommended, since there is a delay between the General registry and Julia's package servers.
+3. Open the release and edit the description to contain `Recommended update` ([example](https://github.com/fonsp/Pluto.jl/releases/tag/v0.14.7))
 
 If you have access to the plutojl.org account for cloudflare.com:
 1. Go to Rules
