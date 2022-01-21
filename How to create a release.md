@@ -2,10 +2,11 @@
 
 Here is how you release a new Pluto.jl version:
 1. Run the new version of Pluto, and play around with a sample notebook to make sure that everything works.
+2. *(Optional, but nice)* The following sample notebooks have an embedded Manifest.toml: `Plots.jl`, `PlutoUI.jl` and `JavaScript`. Using Julia 1.6 (not 1.7), open these notebooks, and click the "update" button to update their packages. Commit these changes to the `main` branch. ([example](https://github.com/fonsp/Pluto.jl/commit/6b76953be6eb7ad805aa47d3b8ea1911ff6626ad)) *If these notebooks are very outdated, then users will have to download many packages twice: once to open the sample notebook, a second time if they use (newer versions of) those packages in a new notebook.*
 4. Edit the `Project.toml` file to bump the version number.
 5. Commit
-1. Wait for tests to pass.
-2. We have a GH Action that takes the code on the `main` branch, bundles the JS files for offline supports, and writes to the `release` branch. Go to the `release` branch, and wait for this commit to arrive. It should take 3 minutes. ([example](https://user-images.githubusercontent.com/6933510/150444129-53b664af-34c3-401f-9bd3-0f4dc8e30f19.png))
+5. Wait for tests to pass.
+6. We have a GH Action that takes the code on the `main` branch, bundles the JS files for offline supports, and writes to the `release` branch. Go to the `release` branch, and wait for this commit to arrive. It should take 3 minutes. ([example](https://user-images.githubusercontent.com/6933510/150444129-53b664af-34c3-401f-9bd3-0f4dc8e30f19.png))
 7. Go to that commit (on the `release` branch, authored by "GitHub Actions"), and comment `@JuliaRegistrator register()` ([example](https://github.com/fonsp/Pluto.jl/commit/6d956c1faa2bca2e4531d8df26b1716ae072869e#commitcomment-64277906))
 8. **While waiting for the version to be merged into General**, you can still cancel it if you changed your mind: comment on the General PR. You can also trigger `@JuliaRegistrator register()` on _another_ (newer) commit with the same version number, and this will replace the PR.
 9. Wait for the new version to be merged into General ([example](https://github.com/JuliaRegistries/General/pull/38455))
