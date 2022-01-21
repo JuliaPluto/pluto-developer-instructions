@@ -2,7 +2,7 @@
 
 Here is how you release a new Pluto.jl version:
 1. Run the new version of Pluto, and play around with a sample notebook to make sure that everything works.
-2. *(Optional, but nice)* The following sample notebooks have an embedded Manifest.toml: `Plots.jl`, `PlutoUI.jl` and `JavaScript`. Using Julia 1.6 (not 1.7), open these notebooks, and click the "update" button to update their packages. Commit these changes to the `main` branch. ([example](https://github.com/fonsp/Pluto.jl/commit/6b76953be6eb7ad805aa47d3b8ea1911ff6626ad)) *If these notebooks are very outdated, then users will have to download many packages twice: once to open the sample notebook, a second time if they use (newer versions of) those packages in a new notebook.*
+2. *(Optional, but nice. Maybe we can automate this one day...)* The following sample notebooks have an embedded Manifest.toml: `Plots.jl`, `PlutoUI.jl` and `JavaScript`. Using Julia 1.6 (not 1.7), open these notebooks, and click the "update" button to update their packages. Commit these changes to the `main` branch. ([example](https://github.com/fonsp/Pluto.jl/commit/6b76953be6eb7ad805aa47d3b8ea1911ff6626ad)) *If these notebooks are very outdated, then users will have to download many packages twice: once to open the sample notebook, a second time if they use (newer versions of) those packages in a new notebook.*
 4. Edit the `Project.toml` file to bump the version number.
 5. Commit
 5. Wait for tests to pass.
