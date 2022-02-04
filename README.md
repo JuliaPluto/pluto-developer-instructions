@@ -20,7 +20,7 @@ As for working with Pluto's internals - the exciting work behind the Julia backe
 
 ### If you want to work with JavaScript
 
-If you want to work on Pluto's internals, **this is were the fun is**! As you'll see on our GitHub Issues, there is lots to do here!
+If you want to work on Pluto's internals, **this is where the fun is**! As you'll see on our GitHub Issues, there is lots to do here!
 
 It is easy to get started with JavaScript for Pluto!
 
