@@ -42,7 +42,7 @@ We are excited to hear what you want to work on, but be sure to chat with us bef
 
 First, git clone the package somehwere, say `~/dev/Pluto.jl/`.
 
-Next, open this folder in VS Code/Atom (we use VS Code), and make sure that you have a nice programming environment for Git, Julia and JavaScript. _But since you are interested in Pluto, we probably don't need to tell you that!_ 😚
+Next, open this folder in VS Code, and [install the "Workspace recommended extensions"](https://user-images.githubusercontent.com/6933510/164228366-610cb2b2-619a-4cb5-a3bb-76d024e9cba3.png). Make sure that you have a nice programming environment for Git, Julia and JavaScript. _But since you are interested in Pluto, we probably don't need to tell you that!_ 😚
 
 Pluto is an IDE, so we will also create a clean package environment to use it in:
 
