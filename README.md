@@ -62,6 +62,8 @@ First, fork the project and `git clone` the project somewhere, perhaps into a `~
 
 Next, open the project's folder in VS Code/Atom (we use VS Code), and make sure that you have a nice programming environment for Git, Julia and JavaScript. _But since you are interested in Pluto, we probably don't need to tell you that!_ 😚
 
+If you have `npm` installed, go to the `frontend/` folder and run `npm install`. This will set up some extra type declarations, for a better editing/linting experience in VS Code.
+
 ### Create a clean package and testing environment
 
 Pluto is an IDE, so we will also create a clean package environment to use it in:
