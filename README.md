@@ -27,7 +27,7 @@ It is easy to get started with JavaScript for Pluto!
 -   There are no build tools! Just change the JS code and refresh the browser. (Use the browser dev tools and VS Code.)
 -   You only need to test on the latest Firefox and Chrome browsers.
 -   The front-end is written in React (actually, Preact with `htm` instead of `JSX`). If you know React, you can jump straight in, if not, you can read up on the basics of React, but many TODO items are doable _without an understanding of the overall structure_.
--   The Pluto.jl has a `.vscode` folder that will automatically set up your development environment with the right extensions and debugging tools. If you are working on a large feature, we also recommend setting up [editing CSS source files directly from the Chrome inspector](https://developer.chrome.com/docs/devtools/workspaces/).
+-   The Pluto.jl repository has a `.vscode` folder that will automatically set up your development environment with the right extensions and debugging tools. If you are working on a large feature, we also recommend setting up [editing CSS source files directly from the Chrome inspector](https://developer.chrome.com/docs/devtools/workspaces/).
 
 **We are always happy to do a video/audio call to talk about the project, about _your project_, and to help you get started! Get in touch over email/slack/zulip/Pluto feedback!**
 
@@ -43,6 +43,8 @@ We are excited to hear what you want to work on, but be sure to chat with us bef
 First, git clone the package somehwere, say `~/dev/Pluto.jl/`.
 
 Next, open this folder in VS Code, and [install the "Workspace recommended extensions"](https://user-images.githubusercontent.com/6933510/164228366-610cb2b2-619a-4cb5-a3bb-76d024e9cba3.png). Make sure that you have a nice programming environment for Git, Julia and JavaScript. _But since you are interested in Pluto, we probably don't need to tell you that!_ 😚
+
+If you have `npm` installed, go to the `frontend/` folder and run `npm install`. This will set up some extra type declarations, for a better editing/linting experience in VS Code.
 
 Pluto is an IDE, so we will also create a clean package environment to use it in:
 
