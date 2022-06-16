@@ -15,13 +15,13 @@ Here is how you release a new Pluto.jl version:
 10. Wait for the new version to be merged into General ([example](https://github.com/JuliaRegistries/General/pull/38455))
 11. Wait for [TagBot](https://github.com/fonsp/Pluto.jl/actions/workflows/TagBot.yml) to tag a new release on fonsp/Pluto.jl ([example](https://github.com/fonsp/Pluto.jl/releases/tag/v0.14.8))
 12. Wait for [this robot](https://github.com/fonsp/pluto-on-binder/actions/workflows/ReleaseLatest.yml) to update [pluto-on-binder](https://github.com/fonsp/pluto-on-binder) and tag a new version (but no release i think) ([example](https://github.com/fonsp/pluto-on-binder/tags))
-13. Use the "Export to HTML" button inside Pluto to generate an export, and open it. This should work (i.e. the `jsdelivr` CDN should server the new Pluto version)
+13. Use the "Export to HTML" button inside Pluto to generate an export, and open it. This should work (i.e. the `jsdelivr` CDN should serve the new Pluto version)
 14. Click the "Edit or Run this notebook" button, and click Binder. This will trigger a binder build.
 15. If you know how, trigger binder builds for all mybinder.org providers.
 
 If this is a **RECOMMENDED** release (i.e. we want all users to get a pop-up to update Pluto, we only do this for crucial bug fixes):
 1. Wait at least 4 hours before marking a release as recommended, since there is a delay between the General registry and Julia's package servers.
-3. Open the release and edit the description to contain `Recommended update` ([example](https://github.com/fonsp/Pluto.jl/releases/tag/v0.14.7))
+3. Open the GitHub release notes and edit the description to contain `Recommended update` ([example](https://github.com/fonsp/Pluto.jl/releases/tag/v0.14.7))
 
 If you have access to the plutojl.org account for cloudflare.com:
 1. Go to Rules
