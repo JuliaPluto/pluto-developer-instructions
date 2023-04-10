@@ -1,5 +1,31 @@
 # How to create a Pluto.jl release
 
+## What is a Pluto release?
+
+A Pluto release is a collection of the following things: (most are generated automatically)
+- A release entry point in the General Julia registry: people who installed Pluto using Pkg can do `Pkg.update()` to get it
+- A git tag
+  - This also makes our frontend assets available on the jsdelivr CDN: https://cdn.jsdelivr.net/gh/fonsp/Pluto.jl/
+- A GitHub release with release notes: useful for our superfans, for future Pluto devs and for documenting a breaking API change
+- An offline-ready bundle of our frontend: https://github.com/fonsp/Pluto.jl/pull/1561
+- An update to https://github.com/fonsp/pluto-on-binder, our repository designed to run a Pluto server on binder, used "headless" by all HTML exports generated from the Pluto GUI. A git tag is created that matches the Pluto version numbers
+
+Following the steps below will make sure that all of these are in place!
+
+## When to release?
+
+After a security fix: release immediately and make it a **RECOMMENDED** release (more on this below).
+
+If there was an important bug fix, release soon.
+
+If there was a large change that still needs more debugging, don't release for a little while. Example is https://github.com/fonsp/Pluto.jl/pull/844 merged on June 11 2021, released on July 6 2021.
+- This can be avoided by hiding the feature behind a flag, and disabling it by default, and later enabling it by default. Example is https://github.com/fonsp/Pluto.jl/pull/1029#issuecomment-927204529
+- If there is a security issue / crucial bug fix that needs to be released during an unstable period, create a branch off the last release, add the fix and release from there. Example is (can't find it but it happened sometimes)
+
+Other than that, we try to have **long periods without a release** for one funny reason: to make binder faster! If lots of people use the same version of Pluto, then all the HTML files they generate will use the same version of pluto-on-binder. This makes binder launches fast. So it's fine to do a release if there was one yesterday, but if the last release was a week ago, then it might be nicer to wait.
+
+## Step by step
+
 *Make sure that you are available to fix any problems during the next two hours.*
 
 Here is how you release a new Pluto.jl version:
