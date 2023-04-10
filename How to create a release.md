@@ -7,6 +7,7 @@ A Pluto release is a collection of the following things: (most are generated aut
 - A git tag
   - This also makes our frontend assets available on the jsdelivr CDN: https://cdn.jsdelivr.net/gh/fonsp/Pluto.jl/
 - A GitHub release with release notes: useful for our superfans, for future Pluto devs and for documenting a breaking API change
+- A new collection of featured notebooks!
 - An offline-ready bundle of our frontend: https://github.com/fonsp/Pluto.jl/pull/1561
 - An update to https://github.com/fonsp/pluto-on-binder, our repository designed to run a Pluto server on binder, used "headless" by all HTML exports generated from the Pluto GUI. A git tag is created that matches the Pluto version numbers
 
