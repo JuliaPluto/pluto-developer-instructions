@@ -60,9 +60,9 @@ to make sure that we are on the same page. Why? Because Pluto is _different from
 
 First, fork the project and `git clone` the project somewhere, perhaps into a `~/dev/Pluto.jl/` directory.
 
-Next, open the project's folder in VS Code/Atom (we use VS Code), and make sure that you have a nice programming environment for Git, Julia and JavaScript. _But since you are interested in Pluto, we probably don't need to tell you that!_ 😚
+Next, open the project's folder in VS Code or another IDE (we often use VS Code), and make sure that you have a nice programming environment for Git, Julia and JavaScript. _But since you are interested in Pluto, we probably don't need to tell you that!_ 😚
 
-If you have `npm` installed, go to the `frontend/` folder and run `npm install`. This will set up some extra type declarations, for a better editing/linting experience in VS Code.
+If you have `npm` installed, go to the `frontend/` folder and run `npm install`. This will set up some extra type declarations, for a better editing/linting experience.
 
 ### Create a clean package and testing environment
 
@@ -80,13 +80,13 @@ julia
 
 ```
 julia> ]
-(@v1.7) pkg>
+(@v1.12) pkg>
 ```
 
 3. Activate the environment and load the local `Pluto.jl` package:
 
 ```
-(@v1.7) pkg> activate .
+(@v1.12) pkg> activate .
 (pluto_tests) pkg> dev ~/dev/Pluto.jl
 ```
 
@@ -99,6 +99,21 @@ In the next section, we'll tell you how to get started. But first, let us explai
 3. **Any other environment** that uses Pluto (including the default environment) - you probably want to add `"Pluto"` from the Julia package registry, not your local development version. _A Pluto notebook worker will probably run in a different package environment than the one you launched Pluto from. This is confusing - and will be changed at some point._
 
 Okay!
+
+### Alternative: global environment
+If you are familiar with the Julia package manager, you can also just `dev` Pluto in your global environment. This is:
+
+```
+(@v1.12) pkg> dev ~/dev/Pluto.jl
+```
+
+If you want to switch back to a normal Pluto release, you can do:
+
+
+```
+(@v1.12) pkg> add Pluto
+```
+
 
 ## How to start your day
 
@@ -143,10 +158,8 @@ Use the Julia REPL package manager to **activate an empty environment** and then
 
 #### Example: run an old Pluto version
 
-You need Julia 1.5 for `--temp`, otherwise do `import Pkg; Pkg.activate(mktempdir())`.
-
 ```julia
-(v1.5) pkg> activate --temp
+(v1.12) pkg> activate --temp
 (jl_khadsfkj) pkg> add Pluto@0.8.0
 julia> import Pluto; Pluto.run(1234)
 ```
@@ -158,7 +171,7 @@ This PR: https://github.com/fonsp/Pluto.jl/pull/530
 is on a fork `pupuis/Pluto.jl`, on its own branch `find-and-replace` (nice!)
 
 ```julia
-(v1.5) pkg> activate --temp
+(v1.12) pkg> activate --temp
 (jl_khadsfkj) pkg> add https://github.com/pupuis/Pluto.jl#find-and-replace
 julia> import Pluto; Pluto.run()
 ```
@@ -172,7 +185,7 @@ You need to find the 'git SHA' of the commit. This is either a 7-character cutie
 And paste after `#` in the URL:
 
 ```julia
-(v1.5) pkg> activate --temp
+(v1.12) pkg> activate --temp
 (jl_khadsfkj) pkg> add https://github.com/fonsp/Pluto.jl#f5050048668b31318afc3459bf81ce3b9cce6854
 julia> import Pluto; Pluto.run()
 ```
