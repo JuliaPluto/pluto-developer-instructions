@@ -56,6 +56,9 @@ to make sure that we are on the same page. Why? Because Pluto is _different from
   a [simulated annealing](https://en.wikipedia.org/wiki/Simulated_annealing) process. By having a small set of (tasteful) features,
   we keep the project **maintable** and **flexible**.
 
+## Understand how Pluto works
+If you want to learn how Pluto works, check out the [Architecture overview](https://plutojl.org/en/docs/architecture/) on our website.
+
 ## Setting up for the first time
 
 First, fork the project and `git clone` the project somewhere, perhaps into a `~/dev/Pluto.jl/` directory.
